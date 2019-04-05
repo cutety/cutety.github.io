@@ -62,6 +62,50 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-关于scanf" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/04/05/关于scanf/" class="article-date">
+  <time datetime="2019-04-05T03:34:20.000Z" itemprop="datePublished">2019-04-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/04/05/关于scanf/">【征服指针】</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="关于scanf"><a href="#关于scanf" class="headerlink" title="关于scanf()"></a><center>关于scanf()</center></h1><p>使用下面两条语句让用户输入整数值：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fgets(buf,<span class="keyword">sizeof</span>(buf),stdiin);</span><br><span class="line"><span class="built_in">sscanf</span>(buf,<span class="string">"%d"</span>,&amp;hoge);</span><br></pre></td></tr></table></figure></p>
+<p>在一般的C入门书中，却经常看到这样的写法：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d"</span>,hoge);</span><br></pre></td></tr></table></figure></p>
+<p>在这一次的例子中，如果使用这种写法，程序是不会如愿运行起来的。因为这种写法在一开始漏掉了getchar()，没有使陈故乡执行进入等待状态。<br><br>    这个问题是由<strong>scanf()</strong>的自身实现造成的。<br><br>    scanf()不是以单位对输入内容进行解释，而是对连续字符流进行解释（换行字符也视为一个字符）。<br><br>    scanf()连续的从流读入字符，并且对和格式说明符(%d)相匹配的部分进行变换处理。<br><br>    例如，当格式说明符为%d时，输入<br><br>    123 return<br><br>    从流中取得123部分的内容，并对他进行处理，换行符依旧会残留在流中。因此，后续的getchar()会吞食这个留下的换行符。<br><br>    此外，当scanf()变换失败的时候（比如，尽管你指定了%d,但是输入的却是英文字符),scanf()会将导致失败的内容残留在流中。<br><br>    在读入过程中有几个对象被成功地变换，则scanf()的返回值就为几。如果做一下错误检查，可能会有人写出下面的代码:<br></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;hoge)!=<span class="number">1</span>)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%输入错误，请再次输入！"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>分析一下上面的代码，我们就会知道，<strong>一旦用户错误输入过一次，这段程序就会进入无限循环。</strong>原因就是：错误输入的那部分字符串，将会被下一个scanf()读到。</p>
+<p align="right">摘自《征服指针》</p>
+
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/04/05/关于scanf/" data-id="cju3itagz00012ip2th1uhyt5" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-SeqList" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/04/04/SeqList/" class="article-date">
@@ -89,7 +133,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/04/04/SeqList/" data-id="cju2ozz7300004hp2w42bw4hy" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/04/04/SeqList/" data-id="cju3itagj00002ip2a61wt3o5" class="article-share-link">Share</a>
       
       
     </footer>
@@ -128,6 +172,10 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2019/04/05/关于scanf/">【征服指针】</a>
+          </li>
         
           <li>
             <a href="/2019/04/04/SeqList/">【线性表】SeqList的各种数据结构算法C语言实现</a>

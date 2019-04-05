@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>【征服指针】 | 汤圆的个人博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="关于scanf()使用下面两条语句让用户输入整数值：12fgets(buf,sizeof(buf),stdiin);sscanf(buf,&quot;%d&quot;,&amp;amp;hoge); 在一般的C入门书中，却经常看到这样的写法：1scanf(&quot;%d&quot;,hoge); 在这一次的例子中，如果使用这种写法，程序是不会如愿运行起来的。因为这种写法在一开始漏掉了getchar()，没有使陈故乡执行进入等待状态。    这">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【征服指针】">
+<meta property="og:url" content="http://yoursite.com/2019/04/05/关于scanf/index.html">
+<meta property="og:site_name" content="汤圆的个人博客">
+<meta property="og:description" content="关于scanf()使用下面两条语句让用户输入整数值：12fgets(buf,sizeof(buf),stdiin);sscanf(buf,&quot;%d&quot;,&amp;amp;hoge); 在一般的C入门书中，却经常看到这样的写法：1scanf(&quot;%d&quot;,hoge); 在这一次的例子中，如果使用这种写法，程序是不会如愿运行起来的。因为这种写法在一开始漏掉了getchar()，没有使陈故乡执行进入等待状态。    这">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-04-05T03:39:21.349Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="【征服指针】">
+<meta name="twitter:description" content="关于scanf()使用下面两条语句让用户输入整数值：12fgets(buf,sizeof(buf),stdiin);sscanf(buf,&quot;%d&quot;,&amp;amp;hoge); 在一般的C入门书中，却经常看到这样的写法：1scanf(&quot;%d&quot;,hoge); 在这一次的例子中，如果使用这种写法，程序是不会如愿运行起来的。因为这种写法在一开始漏掉了getchar()，没有使陈故乡执行进入等待状态。    这">
+  
+    <link rel="alternate" href="/atom.xml" title="汤圆的个人博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">汤圆的个人博客</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-关于scanf" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/04/05/关于scanf/" class="article-date">
+  <time datetime="2019-04-05T03:34:20.000Z" itemprop="datePublished">2019-04-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      【征服指针】
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="关于scanf"><a href="#关于scanf" class="headerlink" title="关于scanf()"></a><center>关于scanf()</center></h1><p>使用下面两条语句让用户输入整数值：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fgets(buf,<span class="keyword">sizeof</span>(buf),stdiin);</span><br><span class="line"><span class="built_in">sscanf</span>(buf,<span class="string">"%d"</span>,&amp;hoge);</span><br></pre></td></tr></table></figure></p>
+<p>在一般的C入门书中，却经常看到这样的写法：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d"</span>,hoge);</span><br></pre></td></tr></table></figure></p>
+<p>在这一次的例子中，如果使用这种写法，程序是不会如愿运行起来的。因为这种写法在一开始漏掉了getchar()，没有使陈故乡执行进入等待状态。<br><br>    这个问题是由<strong>scanf()</strong>的自身实现造成的。<br><br>    scanf()不是以单位对输入内容进行解释，而是对连续字符流进行解释（换行字符也视为一个字符）。<br><br>    scanf()连续的从流读入字符，并且对和格式说明符(%d)相匹配的部分进行变换处理。<br><br>    例如，当格式说明符为%d时，输入<br><br>    123 return<br><br>    从流中取得123部分的内容，并对他进行处理，换行符依旧会残留在流中。因此，后续的getchar()会吞食这个留下的换行符。<br><br>    此外，当scanf()变换失败的时候（比如，尽管你指定了%d,但是输入的却是英文字符),scanf()会将导致失败的内容残留在流中。<br><br>    在读入过程中有几个对象被成功地变换，则scanf()的返回值就为几。如果做一下错误检查，可能会有人写出下面的代码:<br></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;hoge)!=<span class="number">1</span>)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%输入错误，请再次输入！"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>分析一下上面的代码，我们就会知道，<strong>一旦用户错误输入过一次，这段程序就会进入无限循环。</strong>原因就是：错误输入的那部分字符串，将会被下一个scanf()读到。</p>
+<p align="right">摘自《征服指针》</p>
+
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/04/05/关于scanf/" data-id="cju3itagz00012ip2th1uhyt5" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2019/04/04/SeqList/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">【线性表】SeqList的各种数据结构算法C语言实现</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">四月 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/04/05/关于scanf/">【征服指针】</a>
+          </li>
+        
+          <li>
+            <a href="/2019/04/04/SeqList/">【线性表】SeqList的各种数据结构算法C语言实现</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 汤圆<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
