@@ -62,6 +62,50 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-结构体" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/04/06/结构体/" class="article-date">
+  <time datetime="2019-04-06T09:36:09.000Z" itemprop="datePublished">2019-04-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/04/06/结构体/">结构体</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="结构体中-与-gt-的区别"><a href="#结构体中-与-gt-的区别" class="headerlink" title=" 结构体中 (.) 与 (-&gt;)的区别"></a><center> 结构体中 (.) 与 (-&gt;)的区别</center></h1><h3 id="举个例子"><a href="#举个例子" class="headerlink" title="举个例子"></a>举个例子</h3><p>定义如下的结构体：</p>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> ElemType;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">	ElemType *elem;</span><br><span class="line">	<span class="keyword">int</span> length;</span><br><span class="line">	<span class="keyword">int</span> listsize;</span><br><span class="line">&#125;SeqList;</span><br><span class="line">SeqList <span class="built_in">list</span>;</span><br><span class="line">SeqList *plist;</span><br></pre></td></tr></table></figure>
+<p>(.)左边是结果为<strong>结构的表达式</strong>，右边是成员的名称</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">list</span>.elem=<span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+<p>(-&gt;)左边是指向结构体的指针，右边是成员的名称</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plist-&gt;elem=<span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+<p>实际上，这两个意思是一样的。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/04/06/结构体/" data-id="cju5b9hse00023bp29cncda1j" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-关于scanf" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/04/05/关于scanf/" class="article-date">
@@ -96,7 +140,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/04/05/关于scanf/" data-id="cju3itagz00012ip2th1uhyt5" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/04/05/关于scanf/" data-id="cju5b9hs000013bp2givwe4nu" class="article-share-link">Share</a>
       
       
     </footer>
@@ -133,7 +177,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/04/04/SeqList/" data-id="cju3itagj00002ip2a61wt3o5" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/04/04/SeqList/" data-id="cju5b9hrs00003bp2dxsxyzkn" class="article-share-link">Share</a>
       
       
     </footer>
@@ -172,6 +216,10 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2019/04/06/结构体/">结构体</a>
+          </li>
         
           <li>
             <a href="/2019/04/05/关于scanf/">【征服指针】</a>
