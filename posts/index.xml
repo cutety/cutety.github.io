@@ -6,7 +6,17 @@
     <description>Recent content in Posts on 朝花夕拾</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 27 Feb 2022 15:26:42 +0800</lastBuildDate><atom:link href="http://cutety.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 28 Feb 2022 22:07:15 +0800</lastBuildDate><atom:link href="http://cutety.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MySQL索引</title>
+      <link>http://cutety.github.io/posts/mysql%E7%B4%A2%E5%BC%95/</link>
+      <pubDate>Mon, 28 Feb 2022 22:07:15 +0800</pubDate>
+      
+      <guid>http://cutety.github.io/posts/mysql%E7%B4%A2%E5%BC%95/</guid>
+      <description>建立索引的几大原则  最左匹配原则，MySQL会一直匹配直到遇到范围查询(&amp;gt;、&amp;lt;、between、like)就停止匹配。 =和in可以乱序，MySQL的查询优化器会优化成索引可以识别的格式。 尽量使用区别度高的列作索引，状态、性别这种不适合做索引。区别度的公式为count(distinct col)/count(*)，需要join的字段要求0.1以上。 索引列尽量不参与计算 尽量扩展现有的索引，不要新建索引。  limit分页查询 分页查询如果需要查询的数据量比较大，那么limit查询的偏移量就可能会很大，造成查询速度显著降低。可以用子查询的方法来解决
+SELECT * FROM `posts` ORDER BY pid LIMIT 100000, 30 SELECT * FROM `posts` WHERE PID &amp;gt; (  SELECT pid FROM `posts` ORDER BY pid LIMIT 100000, 1 ) LIMIT 30 </description>
+    </item>
+    
     <item>
       <title>来上海一周，随便写写</title>
       <link>http://cutety.github.io/posts/%E6%9D%A5%E4%B8%8A%E6%B5%B7%E4%B8%80%E5%91%A8%E9%9A%8F%E4%BE%BF%E5%86%99%E5%86%99/</link>

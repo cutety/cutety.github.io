@@ -2,11 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://cutety.github.io/posts/mysql%E7%B4%A2%E5%BC%95/</loc>
+    <lastmod>2022-02-28T22:07:15+08:00</lastmod>
+  </url><url>
     <loc>http://cutety.github.io/posts/</loc>
-    <lastmod>2022-02-27T15:26:42+08:00</lastmod>
+    <lastmod>2022-02-28T22:07:15+08:00</lastmod>
   </url><url>
     <loc>http://cutety.github.io/</loc>
-    <lastmod>2022-02-27T15:26:42+08:00</lastmod>
+    <lastmod>2022-02-28T22:07:15+08:00</lastmod>
   </url><url>
     <loc>http://cutety.github.io/posts/%E6%9D%A5%E4%B8%8A%E6%B5%B7%E4%B8%80%E5%91%A8%E9%9A%8F%E4%BE%BF%E5%86%99%E5%86%99/</loc>
     <lastmod>2022-02-27T15:26:42+08:00</lastmod>
