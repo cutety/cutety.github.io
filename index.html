@@ -127,6 +127,18 @@
 
 <article class="first-entry"> 
   <header class="entry-header">
+    <h2>[Go]Channel
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>操作不同状态channel的结果    操作 channel状态 结果 备注     Write nil panic     打开不满 写入成功     打开满 deadlock     close panic send on closed channel   Read nil panic goroutine 1 [chan receive (nil chan)]    打开空 deadlock     打开有数据 输出数据     close 如果有数据就将数据输出    close nil panic close of nil channel    打开 正常     关闭 panic close of closed channel    </p>
+  </section>
+  <footer class="entry-footer"><span title='2022-03-02 15:02:49 +0800 +0800'>March 2, 2022</span></footer>
+  <a class="entry-link" aria-label="post link to [Go]Channel" href="http://cutety.github.io/posts/gochannel/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2>MySQL索引
     </h2>
   </header>

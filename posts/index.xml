@@ -6,7 +6,16 @@
     <description>Recent content in Posts on 朝花夕拾</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 28 Feb 2022 22:07:15 +0800</lastBuildDate><atom:link href="http://cutety.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 02 Mar 2022 15:02:49 +0800</lastBuildDate><atom:link href="http://cutety.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Go]Channel</title>
+      <link>http://cutety.github.io/posts/gochannel/</link>
+      <pubDate>Wed, 02 Mar 2022 15:02:49 +0800</pubDate>
+      
+      <guid>http://cutety.github.io/posts/gochannel/</guid>
+      <description>操作不同状态channel的结果    操作 channel状态 结果 备注     Write nil panic     打开不满 写入成功     打开满 deadlock     close panic send on closed channel   Read nil panic goroutine 1 [chan receive (nil chan)]    打开空 deadlock     打开有数据 输出数据     close 如果有数据就将数据输出    close nil panic close of nil channel    打开 正常     关闭 panic close of closed channel    </description>
+    </item>
+    
     <item>
       <title>MySQL索引</title>
       <link>http://cutety.github.io/posts/mysql%E7%B4%A2%E5%BC%95/</link>
