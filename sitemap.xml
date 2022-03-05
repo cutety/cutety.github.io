@@ -2,13 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://cutety.github.io/posts/gochannel/</loc>
-    <lastmod>2022-03-02T15:02:49+08:00</lastmod>
-  </url><url>
     <loc>http://cutety.github.io/posts/</loc>
-    <lastmod>2022-03-02T15:02:49+08:00</lastmod>
+    <lastmod>2022-03-05T14:50:34+08:00</lastmod>
   </url><url>
     <loc>http://cutety.github.io/</loc>
+    <lastmod>2022-03-05T14:50:34+08:00</lastmod>
+  </url><url>
+    <loc>http://cutety.github.io/posts/%E6%9C%AC%E5%9C%B0%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%90%AD%E5%BB%BAkubenates%E9%9B%86%E7%BE%A4/</loc>
+    <lastmod>2022-03-05T14:50:34+08:00</lastmod>
+  </url><url>
+    <loc>http://cutety.github.io/posts/gochannel/</loc>
     <lastmod>2022-03-02T15:02:49+08:00</lastmod>
   </url><url>
     <loc>http://cutety.github.io/posts/mysql%E7%B4%A2%E5%BC%95/</loc>

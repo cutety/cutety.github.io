@@ -6,7 +6,23 @@
     <description>Recent content on 朝花夕拾</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 02 Mar 2022 15:02:49 +0800</lastBuildDate><atom:link href="http://cutety.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 05 Mar 2022 14:50:34 +0800</lastBuildDate><atom:link href="http://cutety.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>本地虚拟机搭建kubenates集群</title>
+      <link>http://cutety.github.io/posts/%E6%9C%AC%E5%9C%B0%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%90%AD%E5%BB%BAkubenates%E9%9B%86%E7%BE%A4/</link>
+      <pubDate>Sat, 05 Mar 2022 14:50:34 +0800</pubDate>
+      
+      <guid>http://cutety.github.io/posts/%E6%9C%AC%E5%9C%B0%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%90%AD%E5%BB%BAkubenates%E9%9B%86%E7%BE%A4/</guid>
+      <description>概述 今天跟着k8s easydoc在本地利用虚拟机搭建了k8s集群。
+创建虚拟机 这里用的是centos7, 使用VMware创建了三台2核2GB的虚拟机，这里不介绍怎么安装了，可以跟着菜鸟教程VMware安装CentOS 7教程来做。创建一台master，其余两个node节点，可以使用VMware的克隆功能来简化创建操作。
+安装完毕之后需要注意的是这里安装的CentOS 7，使用ip addr来查看虚拟机的ip。
+配置虚拟机 输入ip addr命令，inet后面为该机器的内网地址，我的三台机器ip情况为
+   ip name     192.168.2.110 master   192.168.2.111 node1   192.168.2.112 node2    为每台机器设置hostname hostname set-hostname master hostname set-hostname node1 hostname set-hostname node2 设置之后可以通过hostname命令查看是否设置成功。
+设置hosts vi /etc/hosts 在结尾插入
+192.168.2.110 master 192.168.2.111 node1 192.168.2.112 node2 ESC :wp保存退出
+关闭SELinux [all] setenforce 0 sed -i --follow-symlinks &amp;#39;s/SELINUX=enforcing/SELINUX=disabled/g&amp;#39; /etc/sysconfig/selinux 关闭防火墙 [all] systemctl stop firewalld systemctl disable firewalld 添加安装源 [all] 添加 k8s 安装源 cat &amp;lt;&amp;lt;EOF &amp;gt; kubernetes.</description>
+    </item>
+    
     <item>
       <title>[Go]Channel</title>
       <link>http://cutety.github.io/posts/gochannel/</link>
