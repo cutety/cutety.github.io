@@ -6,7 +6,24 @@
     <description>Recent content on 朝花夕拾</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 05 Mar 2022 14:50:34 +0800</lastBuildDate><atom:link href="http://cutety.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 07 Mar 2022 21:27:03 +0800</lastBuildDate><atom:link href="http://cutety.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>面试记录</title>
+      <link>http://cutety.github.io/posts/%E9%9D%A2%E8%AF%95%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Mon, 07 Mar 2022 21:27:03 +0800</pubDate>
+      
+      <guid>http://cutety.github.io/posts/%E9%9D%A2%E8%AF%95%E8%AE%B0%E5%BD%95/</guid>
+      <description>概述 这篇博客记录面试
+3-7 上午 谷露软件 这家岗位是DevOps
+算法  reverse linkedList two sum  golang 相关  GC GMP Go如何保证线程安全 CAS  k8s  k8s的组件 通过最近几天的学习你对k8s有什么了解 MySQL主从复制  项目  redis的应用 排行榜、效率工具   今天下午其实还去谷露做了二面，由于体验不是很好，也没问技术相关的问题，主要是问了未来的计划，所以这里就不记录了
+ 3-7 下午 星宙之形 一面  go channel在工作中用过嘛  工作中确实没用过
+  那你自己对channel有了解嘛  有一点了解
+  channel的使用场景  控制并发、做消息队列
+  为什么channel可以控制并发  channel 内部有加了互斥锁
+  channel的类型以及不同类型的使用场景  有缓存和无缓存. 有缓存的channel可以拿来当队列使用，无缓存的当时没答上来，在面试官的引导下说了一种。（其实就是前面提到的控制并发）比如可以控制不同的goroutine的执行。
+  go里面的切片用过吧？那你说一下如果定义了一个切片，在方法内部对这个切片做了一些修改的操作，方法结束后这个切片会跟着改变吗？  用过，不一定会改变，如果对切片做了扩容操作那么就会创建一个新的切片对象，这样一来就和之前切片不一样了，如果没有做扩容操作的话，原来的切片就会跟着改变。</description>
+    </item>
+    
     <item>
       <title>本地虚拟机搭建kubenates集群</title>
       <link>http://cutety.github.io/posts/%E6%9C%AC%E5%9C%B0%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%90%AD%E5%BB%BAkubenates%E9%9B%86%E7%BE%A4/</link>
