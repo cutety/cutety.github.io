@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="Hugo 0.93.2" />
+  <meta name="generator" content="Hugo 0.101.0" />
 
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -21,7 +21,7 @@
       "articleSection" : "posts",
       "name" : "MySQL索引",
       "headline" : "MySQL索引",
-      "description" : "建立索引的几大原则  最左匹配原则，MySQL会一直匹配直到遇到范围查询(\u0026gt;、\u0026lt;、between、like)就停止匹配。 =和in可以乱序，MySQL的查询优化器会优化成索引可以识别的格式。 尽量使用区别度高的列作索引，状态、性别这种不适合做索引。区别度的公式为count(distinct col)\/count(*)，需要join的字段要求0.1以上。 索引列尽量不参与计算 尽量扩展现有的索引，不要新建索引。  limit分页查询 分页查询如果需要查询的数据量比较大，那么limit查询的偏移量就可能会很大，造成查询速度显著降低。可以用子查询的方法来解决\nSELECT * FROM `posts` ORDER BY pid LIMIT 100000, 30 SELECT * FROM `posts` WHERE PID \u0026gt; (  SELECT pid FROM `posts` ORDER BY pid LIMIT 100000, 1 ) LIMIT 30 ",
+      "description" : "建立索引的几大原则 最左匹配原则，MySQL会一直匹配直到遇到范围查询(\u0026gt;、\u0026lt;、between、like)就停止匹配。 =和in可以乱序，MySQL的查询优化器会优化成索引可以识别的格式。 尽量使用区别度高的列作索引，状态、性别这种不适合做索引。区别度的公式为count(distinct col)\/count(*)，需要join的字段要求0.1以上。 索引列尽量不参与计算 尽量扩展现有的索引，不要新建索引。 limit分页查询 分页查询如果需要查询的数据量比较大，那么limit查询的偏移量就可能会很大，造成查询速度显著降低。可以用子查询的方法来解决\nSELECT * FROM `posts` ORDER BY pid LIMIT 100000, 30 SELECT * FROM `posts` WHERE PID \u0026gt; ( SELECT pid FROM `posts` ORDER BY pid LIMIT 100000, 1 ) LIMIT 30 ",
       "inLanguage" : "en-US",
       "author" : "alex",
       "creator" : "alex",
@@ -38,10 +38,10 @@
 <title>MySQL索引</title>
   <meta property="og:title" content="MySQL索引" />
   <meta property="og:type" content="article" />
-  <meta property="og:description" content="建立索引的几大原则  最左匹配原则，MySQL会一直匹配直到遇到范围查询(&amp;gt;、&amp;lt;、between、like)就停止匹配。 =和in可以乱序，MySQL的查询优化器会优化成索引可以识别的格式。 尽量使用区别度高的列作索引，状态、性别这种不适合做索引。区别度的公式为count(distinct col)/count(*)，需要join的字段要求0.1以上。 索引列尽量不参与计算 尽量扩展现有的索引，不要新建索引。  limit分页查询 分页查询如果需要查询的数据量比较大，那么limit查询的偏移量就可能会很大，造成查询速度显著降低。可以用子查询的方法来解决
-SELECT * FROM `posts` ORDER BY pid LIMIT 100000, 30 SELECT * FROM `posts` WHERE PID &amp;gt; (  SELECT pid FROM `posts` ORDER BY pid LIMIT 100000, 1 ) LIMIT 30 " />
-  <meta name="description" content="建立索引的几大原则  最左匹配原则，MySQL会一直匹配直到遇到范围查询(&amp;gt;、&amp;lt;、between、like)就停止匹配。 =和in可以乱序，MySQL的查询优化器会优化成索引可以识别的格式。 尽量使用区别度高的列作索引，状态、性别这种不适合做索引。区别度的公式为count(distinct col)/count(*)，需要join的字段要求0.1以上。 索引列尽量不参与计算 尽量扩展现有的索引，不要新建索引。  limit分页查询 分页查询如果需要查询的数据量比较大，那么limit查询的偏移量就可能会很大，造成查询速度显著降低。可以用子查询的方法来解决
-SELECT * FROM `posts` ORDER BY pid LIMIT 100000, 30 SELECT * FROM `posts` WHERE PID &amp;gt; (  SELECT pid FROM `posts` ORDER BY pid LIMIT 100000, 1 ) LIMIT 30 " />
+  <meta property="og:description" content="建立索引的几大原则 最左匹配原则，MySQL会一直匹配直到遇到范围查询(&amp;gt;、&amp;lt;、between、like)就停止匹配。 =和in可以乱序，MySQL的查询优化器会优化成索引可以识别的格式。 尽量使用区别度高的列作索引，状态、性别这种不适合做索引。区别度的公式为count(distinct col)/count(*)，需要join的字段要求0.1以上。 索引列尽量不参与计算 尽量扩展现有的索引，不要新建索引。 limit分页查询 分页查询如果需要查询的数据量比较大，那么limit查询的偏移量就可能会很大，造成查询速度显著降低。可以用子查询的方法来解决
+SELECT * FROM `posts` ORDER BY pid LIMIT 100000, 30 SELECT * FROM `posts` WHERE PID &amp;gt; ( SELECT pid FROM `posts` ORDER BY pid LIMIT 100000, 1 ) LIMIT 30 " />
+  <meta name="description" content="建立索引的几大原则 最左匹配原则，MySQL会一直匹配直到遇到范围查询(&amp;gt;、&amp;lt;、between、like)就停止匹配。 =和in可以乱序，MySQL的查询优化器会优化成索引可以识别的格式。 尽量使用区别度高的列作索引，状态、性别这种不适合做索引。区别度的公式为count(distinct col)/count(*)，需要join的字段要求0.1以上。 索引列尽量不参与计算 尽量扩展现有的索引，不要新建索引。 limit分页查询 分页查询如果需要查询的数据量比较大，那么limit查询的偏移量就可能会很大，造成查询速度显著降低。可以用子查询的方法来解决
+SELECT * FROM `posts` ORDER BY pid LIMIT 100000, 30 SELECT * FROM `posts` WHERE PID &amp;gt; ( SELECT pid FROM `posts` ORDER BY pid LIMIT 100000, 1 ) LIMIT 30 " />
   <meta property="og:locale" content="en-us" />
 
   

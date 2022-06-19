@@ -6,7 +6,20 @@
     <description>Recent content on 朝花夕拾</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 07 Mar 2022 21:27:03 +0800</lastBuildDate><atom:link href="http://cutety.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 19 Jun 2022 11:04:07 +0800</lastBuildDate><atom:link href="http://cutety.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>到上海一年记录</title>
+      <link>http://cutety.github.io/posts/%E5%88%B0%E4%B8%8A%E6%B5%B7%E4%B8%80%E5%B9%B4%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Sun, 19 Jun 2022 11:04:07 +0800</pubDate>
+      
+      <guid>http://cutety.github.io/posts/%E5%88%B0%E4%B8%8A%E6%B5%B7%E4%B8%80%E5%B9%B4%E8%AE%B0%E5%BD%95/</guid>
+      <description>距离上次写blog已经过去了三个月了，因为疫情，在家里居家办公了两个多月，新的工作比上家好太多了， 各方面流程也很正规，不过自己还是有很多不足的地方，有时候压力还是有点大。
+去年三月份联系了老东家定好了毕业答辩后继续去实习，所以去年5月18号早上五点到了上海，那时候一个人提着行李箱， 房子还没找好，因为之前定好的房子被房东放鸽子了，所以当时还花了六百多块钱租了几天小宾馆住在公司附近。早上放完行李就过去报到了。 因为没房子，所以我和我室友利用午休时间去看了房子，在当天就定下来了一个两室一厅，5月20号入住，就这样住了一年。因为疫情，原本今年五月份 房租就到期了，我们又和中介商量续租了一个月，所以到6月20号到期。
+今年61上海解封，因为我和室友都换了工作，我工作地点离现在住的地方太远，所以我们不继续合租，开始自己找了。通过这一年的合租，我发现还是一个人住着舒服， 但是整租一居室又有点超预算了，所以上周在公司附近找了个套娃房，比之前贵1k，电费1块钱一度，说实话有点心疼电费，不过一个人住离公司近，先住住看~
+昨天618，花了一天的时间叫了货拉拉，还有女朋友帮着我一起搬家。搬家好累，下午搬过来收拾到了晚上，感觉太对不起女朋友了，我自己搬家还让她帮我，在这么热的天一起受罪。 昨晚洗完澡躺床上全身都是疼的，但是死活睡不着，在床上辗转到三点多，我感觉我自己经常给自己压力，老想很多有的没的。
+满打满算从毕业来上海一年了，希望以后工作顺利一点，自己可以有一些进步~</description>
+    </item>
+    
     <item>
       <title>面试记录</title>
       <link>http://cutety.github.io/posts/%E9%9D%A2%E8%AF%95%E8%AE%B0%E5%BD%95/</link>
@@ -15,13 +28,23 @@
       <guid>http://cutety.github.io/posts/%E9%9D%A2%E8%AF%95%E8%AE%B0%E5%BD%95/</guid>
       <description>概述 这篇博客记录面试
 3-7 上午 谷露软件 这家岗位是DevOps
-算法  reverse linkedList two sum  golang 相关  GC GMP Go如何保证线程安全 CAS  k8s  k8s的组件 通过最近几天的学习你对k8s有什么了解 MySQL主从复制  项目  redis的应用 排行榜、效率工具   今天下午其实还去谷露做了二面，由于体验不是很好，也没问技术相关的问题，主要是问了未来的计划，所以这里就不记录了
- 3-7 下午 星宙之形 一面  go channel在工作中用过嘛  工作中确实没用过
-  那你自己对channel有了解嘛  有一点了解
-  channel的使用场景  控制并发、做消息队列
-  为什么channel可以控制并发  channel 内部有加了互斥锁
-  channel的类型以及不同类型的使用场景  有缓存和无缓存. 有缓存的channel可以拿来当队列使用，无缓存的当时没答上来，在面试官的引导下说了一种。（其实就是前面提到的控制并发）比如可以控制不同的goroutine的执行。
-  go里面的切片用过吧？那你说一下如果定义了一个切片，在方法内部对这个切片做了一些修改的操作，方法结束后这个切片会跟着改变吗？  用过，不一定会改变，如果对切片做了扩容操作那么就会创建一个新的切片对象，这样一来就和之前切片不一样了，如果没有做扩容操作的话，原来的切片就会跟着改变。</description>
+算法 reverse linkedList two sum golang 相关 GC GMP Go如何保证线程安全 CAS k8s k8s的组件 通过最近几天的学习你对k8s有什么了解 MySQL主从复制 项目 redis的应用 排行榜、效率工具 今天下午其实还去谷露做了二面，由于体验不是很好，也没问技术相关的问题，主要是问了未来的计划，所以这里就不记录了
+3-7 下午 星宙之形 一面 go channel在工作中用过嘛 工作中确实没用过
+那你自己对channel有了解嘛 有一点了解
+channel的使用场景 控制并发、做消息队列
+为什么channel可以控制并发 channel 内部有加了互斥锁
+channel的类型以及不同类型的使用场景 有缓存和无缓存. 有缓存的channel可以拿来当队列使用，无缓存的当时没答上来，在面试官的引导下说了一种。（其实就是前面提到的控制并发）比如可以控制不同的goroutine的执行。
+go里面的切片用过吧？那你说一下如果定义了一个切片，在方法内部对这个切片做了一些修改的操作，方法结束后这个切片会跟着改变吗？ 用过，不一定会改变，如果对切片做了扩容操作那么就会创建一个新的切片对象，这样一来就和之前切片不一样了，如果没有做扩容操作的话，原来的切片就会跟着改变。
+那我怎么可以拿到改变后的切片呢？不管有没有扩容 可以在传参的时候传递切片的指针。
+go的map是线程不安全的，并发时会加锁；如果有个map数据会被并发访问，如果加了锁会导致性能下降，如何解决这个问题呢？ 这个没什么思路，面试官也引导我向粒度的问题靠近，最后的解决办法就是降低锁的粒度，可以给这个map拆分成多个map，把比较热点的kv提出来放到单独的一个map里面。
+MySQL的索引是什么结构，为什么要用这个结构？ B+树，减少硬盘的寻道时间，提高搜索速度
+B+树和二叉树有什么区别 二叉树每个节点只有两个子节点，B+树可以有多个节点
+B+树里面存了什么？聚簇索引是什么，联合索引存了什么？通过联合索引怎么找到数据的？ B+树的数据存在叶子节点上，聚簇索引是MySQL里的主键索引，聚簇索引的B+树存了表每一列的主键和对应的数据。联合索引也是一个B+树，保存了该索引键和对应列的主键，这一块叫做回表。
+为什么你们要用gRPC，直接用HTTP不行吗？ gRPC是远程过程调用，可以调其他服务的方法，另外gRPC用了HTTP2的协议，有HTTP2的一些特性，比如长连接，可以在请求数据的时候保存请求头等信息，节省传输资源，提高传输效率。同时有ProtoBuf这个序列化协议加持，可以对数据进行高效的处理。
+为什么用ProtoBuf，那么麻烦还需要定义一堆规则，不同的语言也要用不同的序列化工具，多不方便，为什么不直接用JSON ProtoBuf主要是砍掉了传输数据中的key，用提前定义好的索引1、2、3、4……来定位value，因此需要传输的数据比JSON少，也不需要传花括号这些内容。像go里面的int64类型，也做了一些特殊处理，大小并不是固定的，所以也可以节约资源。
+Redis可以拿来做什么 消息队列，缓存
+消息队列怎么实现 说了半天，其实可以用list实现
+二面 二面主要聊了项目，也涉及了一些一面中问到的问题，主要是考察我符不符合他们团队的风格，我个人感觉我还是可以的，我也很喜欢他们的风格，和二面面试官聊完之后我就贼想来这家公司了。</description>
     </item>
     
     <item>
@@ -34,10 +57,10 @@
 创建虚拟机 这里用的是centos7, 使用VMware创建了三台2核2GB的虚拟机，这里不介绍怎么安装了，可以跟着菜鸟教程VMware安装CentOS 7教程来做。创建一台master，其余两个node节点，可以使用VMware的克隆功能来简化创建操作。
 安装完毕之后需要注意的是这里安装的CentOS 7，使用ip addr来查看虚拟机的ip。
 配置虚拟机 输入ip addr命令，inet后面为该机器的内网地址，我的三台机器ip情况为
-   ip name     192.168.2.110 master   192.168.2.111 node1   192.168.2.112 node2    为每台机器设置hostname hostname set-hostname master hostname set-hostname node1 hostname set-hostname node2 设置之后可以通过hostname命令查看是否设置成功。
+ip name 192.168.2.110 master 192.168.2.111 node1 192.168.2.112 node2 为每台机器设置hostname hostname set-hostname master hostname set-hostname node1 hostname set-hostname node2 设置之后可以通过hostname命令查看是否设置成功。
 设置hosts vi /etc/hosts 在结尾插入
 192.168.2.110 master 192.168.2.111 node1 192.168.2.112 node2 ESC :wp保存退出
-关闭SELinux [all] setenforce 0 sed -i --follow-symlinks &amp;#39;s/SELINUX=enforcing/SELINUX=disabled/g&amp;#39; /etc/sysconfig/selinux 关闭防火墙 [all] systemctl stop firewalld systemctl disable firewalld 添加安装源 [all] 添加 k8s 安装源 cat &amp;lt;&amp;lt;EOF &amp;gt; kubernetes.</description>
+关闭SELinux [all] setenforce 0 sed -i --follow-symlinks &amp;#39;s/SELINUX=enforcing/SELINUX=disabled/g&amp;#39; /etc/sysconfig/selinux 关闭防火墙 [all] systemctl stop firewalld systemctl disable firewalld 添加安装源 [all] 添加 k8s 安装源 cat &amp;lt;&amp;lt;EOF &amp;gt; kubernetes.repo [kubernetes] name=Kubernetes baseurl=https://mirrors.</description>
     </item>
     
     <item>
@@ -46,7 +69,7 @@
       <pubDate>Wed, 02 Mar 2022 15:02:49 +0800</pubDate>
       
       <guid>http://cutety.github.io/posts/gochannel/</guid>
-      <description>操作不同状态channel的结果    操作 channel状态 结果 备注     Write nil panic     打开不满 写入成功     打开满 deadlock     close panic send on closed channel   Read nil panic goroutine 1 [chan receive (nil chan)]    打开空 deadlock     打开有数据 输出数据     close 如果有数据就将数据输出    close nil panic close of nil channel    打开 正常     关闭 panic close of closed channel    </description>
+      <description>操作不同状态channel的结果 操作 channel状态 结果 备注 Write nil panic 打开不满 写入成功 打开满 deadlock close panic send on closed channel Read nil panic goroutine 1 [chan receive (nil chan)] 打开空 deadlock 打开有数据 输出数据 close 如果有数据就将数据输出 close nil panic close of nil channel 打开 正常 关闭 panic close of closed channel </description>
     </item>
     
     <item>
@@ -55,8 +78,8 @@
       <pubDate>Mon, 28 Feb 2022 22:07:15 +0800</pubDate>
       
       <guid>http://cutety.github.io/posts/mysql%E7%B4%A2%E5%BC%95/</guid>
-      <description>建立索引的几大原则  最左匹配原则，MySQL会一直匹配直到遇到范围查询(&amp;gt;、&amp;lt;、between、like)就停止匹配。 =和in可以乱序，MySQL的查询优化器会优化成索引可以识别的格式。 尽量使用区别度高的列作索引，状态、性别这种不适合做索引。区别度的公式为count(distinct col)/count(*)，需要join的字段要求0.1以上。 索引列尽量不参与计算 尽量扩展现有的索引，不要新建索引。  limit分页查询 分页查询如果需要查询的数据量比较大，那么limit查询的偏移量就可能会很大，造成查询速度显著降低。可以用子查询的方法来解决
-SELECT * FROM `posts` ORDER BY pid LIMIT 100000, 30 SELECT * FROM `posts` WHERE PID &amp;gt; (  SELECT pid FROM `posts` ORDER BY pid LIMIT 100000, 1 ) LIMIT 30 </description>
+      <description>建立索引的几大原则 最左匹配原则，MySQL会一直匹配直到遇到范围查询(&amp;gt;、&amp;lt;、between、like)就停止匹配。 =和in可以乱序，MySQL的查询优化器会优化成索引可以识别的格式。 尽量使用区别度高的列作索引，状态、性别这种不适合做索引。区别度的公式为count(distinct col)/count(*)，需要join的字段要求0.1以上。 索引列尽量不参与计算 尽量扩展现有的索引，不要新建索引。 limit分页查询 分页查询如果需要查询的数据量比较大，那么limit查询的偏移量就可能会很大，造成查询速度显著降低。可以用子查询的方法来解决
+SELECT * FROM `posts` ORDER BY pid LIMIT 100000, 30 SELECT * FROM `posts` WHERE PID &amp;gt; ( SELECT pid FROM `posts` ORDER BY pid LIMIT 100000, 1 ) LIMIT 30 </description>
     </item>
     
     <item>
